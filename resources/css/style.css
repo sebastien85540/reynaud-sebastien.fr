@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+
+
+/****************************************************
+*****************           BODY                 ****
+****************************************************/
+#accueil{
+    background-image: url(https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+}  
+#accueil p, h1{
+    text-align: center;
+    color: #ffffff;
+} 
+
+.carousel-item img{
+    margin-top: 50px;    
+}
+footer{
+    background-color: black;
+    color: #ffffff;
+    height: 40px;
+    text-align: center;
+} 
+#contact input{
+    width: 60%;
+}  
+#message{
+    width: 100%;
+}                       

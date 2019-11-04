@@ -1,39 +1,195 @@
-
-
-
-
-
-
-
-
-
+/*****************************************************************************************************************************************
+**************************************                             REYNAUD-SEBASTIEN.FR                          *************************
+*****************************************************************************************************************************************/
+/*
+    Nom du site : reynaud-sebastien.fr
+    Version     : 1.0.0
+    Auteur      : sebastien reynaud
+*/    
+/********************************************************
+*********                FONTS                   ********
+********************************************************/
+/*    
+    h1          : 'droid_sansregular', 'Arial', sans-serif;
+    h2          :
+    h3          :
+    h4          :
+    h5          :
+    h6          : 
+    p           : 'BallparkWeiner', serif, 'Arial';
+    li          : 'Dayrom',Verdana, Geneva, Tahoma, sans-serif 
+    */
+/********************************************************
+*********                COLORS                  ********
+********************************************************/  
+/*    
+    h1          : rgb(0, 0, 97);
+    h2          : rgb(0, 0, 97);
+    h3          :
+    h4          :
+    h5          :
+    h6          : 
+    p           : rgb(30, 0, 70);
+    li          : rgba(124, 124, 250, 0.801);
+    */
 /****************************************************
 *****************           BODY                 ****
 ****************************************************/
-#accueil{
-    background-image: url(https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_960_720.jpg);
+/* Définition des polices personnalisées */
+
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face 
+{
+    font-family: 'droid_sansregular';
+    src: url('DroidSans-webfont.eot');
+    src: url('DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DroidSans-webfont.woff') format('woff'),
+         url('DroidSans-webfont.ttf') format('truetype'),
+         url('DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/********************************************************
+*********                FONTS                   ********
+********************************************************/
+h1{
+    color: rgb(0, 0, 97);
+    font-family: 'droid_sansregular', 'Arial', sans-serif;
+    text-align: center;
+}
+h2{
+    color: rgb(0, 0, 97);
+    text-align: center;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 2%;
+    text-align: center;
+}
+p{
+    font-family: 'BallparkWeiner', serif, 'Arial';
+    color: rgb(30, 0, 70);
+    text-align: center;
+    margin: 0;
+}
+li{
+    font-family: 'Dayrom', Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(124, 124, 250, 0.801);
+}
+i{
+    color: #ffffff;
+}
+
+/********************************************************
+*********                BODY                    ********
+********************************************************/
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/04/20/23/binary-2372130_960_720.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 90vh;
 }  
-#accueil p, h1{
-    text-align: center;
-    color: #ffffff;
-} 
 
-.carousel-item img{
-    margin-top: 50px;    
-}
+/********************************************************
+*********                NAVBAR                  ********
+********************************************************/
+
+
+/********************************************************
+*********                FOOTER                  ********
+********************************************************/
+
 footer{
     background-color: black;
-    color: #ffffff;
-    height: 40px;
+    height: auto;
     text-align: center;
+}
+footer p{
+    color: #ffffff;
+
 } 
+
+/********************************************************
+*********                ACCUEIL                 ********
+********************************************************/
+#accueil{
+    padding-bottom: 6%;
+    margin-top: 1%;
+}
+
+.carousel-item img{
+    margin-top: 15%;    
+}
+/********************************************************
+*********                CONTACT                 ********
+********************************************************/
 #contact input{
     width: 60%;
 }  
 #message{
     width: 100%;
-}                       
+} 
+/********************************************************
+*********              MON CV                    ********
+********************************************************/
+#cv{
+    background-image: url(../images/cv/fond_jaune.png);
+    padding-top: 1%;
+} 
+#cv h1{
+    padding-left: 8%;
+}
+#cv img{
+    width: 100%;
+    box-shadow: 5px 5px 5px black;
+} 
+.col-md-1{
+    text-align: center;
+}
+.en-tete{
+    background: url('../images/cv/separateur.png') repeat-x bottom;
+    display: block;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.mes-competences h3 {
+    margin-bottom: 12%;
+}
+.mes-formations h3{
+    margin-bottom: 12%;
+}
+.liens{
+    display: block;
+    background:  url('../images/cv/ico_top.png') no-repeat top center, url('../images/cv/separateur.png') repeat-x top, url('../images/cv/ombre.png') repeat-x top;
+    padding-top: 25px;
+}
+.liens li i{
+    color: rgb(0, 0, 182);
+}
+
+/********************************************************
+*********            MEDIA QUERIES               ********
+********************************************************/

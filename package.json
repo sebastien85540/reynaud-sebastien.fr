@@ -1,0 +1,25 @@
+{
+  "name": "reynaud-sebastien.fr",
+  "version": "1.0.0",
+  "description": "vous pouvez y trouvé tous mes projets en cours ou finis, ainsi que mon CV",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastien85540/reynaud-sebastien.fr.git"
+  },
+  "author": "sebastien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastien85540/reynaud-sebastien.fr/issues"
+  },
+  "homepage": "https://github.com/sebastien85540/reynaud-sebastien.fr#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.7.10",
+    "nodemon": "^1.19.4"
+  }
+}

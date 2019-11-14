@@ -1,0 +1,68 @@
+    <!--========================================================CONTACT===================================================-->
+        <secion class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <h4>Contact</h4>
+                        <p>Je me ferai un plaisir de répondre à vos questions.</p>
+                    </div>
+                </div>
+                <div class="container ">
+                <form action="/" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <label for="lastname">Nom :</label>
+                          <input type="text" name="lastname" id="lastname" required>  
+                        </div>
+                        <div class="col-md-6">
+                            <label for="firstname">Prénom :</label>
+                            <input type="text" name="firstname" id="firstname" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="email">Email :</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone">Téléphone :</span></label>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="address">Adresse :</label>
+                            <input type="text" name="address" id="address">
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md">
+                                <label for="address2">Complement :</label>
+                                <input type="text" name="address2" id="address2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="cp">CP :</label>
+                                <input type="tel" name="cp" id="cp" pattern="[0-9]{5}" required>
+                            </div>
+                            <div class="col-md-10">
+                                <label for="city">Ville :</label>
+                                <input type="text" name="city" id="city">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="message">Message :</label>
+                                <textarea name="message" id="message" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                    <form action="index.html" method="get">
+                        <button class="btn btn-danger">Annuler</button>
+                    </form>
+                    </div>
+            </div>
+
+        </secion>

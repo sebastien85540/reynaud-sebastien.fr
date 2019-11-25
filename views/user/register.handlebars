@@ -1,0 +1,43 @@
+<section class="register">
+  <div class="container">
+    <form action="/user/register" method="POST" enctype="multipart/form-data">
+      <div class="row form-group">
+        <div class="col-md">
+          <label for="lastname">Nom :</label>
+          <input type="text" name="lastname" id="lastname" class="form-control" value={{data.lastname}}>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md">
+          <label for="firstname">Prénom :</label>
+          <input type="text" name="firstname" id="firstname" class="form-control" value={{data.firstname}}>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md">
+          <label for="email">Email :</label>
+          <input type="email" name="email" id="email" class="form-control" value={{data.email}}>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md">
+          <label for="password">Mot de passe</label>
+          <input type="password" name="password" id="password" class="form-control">
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md">
+          <button type="submit" class="btn btn-primary">envoyer</button>
+        </div>
+      </div>
+    </form>
+
+    <form action="index.html" method="get">
+      <div class="row form-group">
+        <button class="btn btn-danger">Annuler</button>
+      </div>
+    </form>
+  </div>
+
+  </div>
+</section>

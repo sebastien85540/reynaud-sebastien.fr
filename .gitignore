@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+# nodemailer
+config/
+# captcha
+index.php

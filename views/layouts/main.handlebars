@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,74 @@
     <!--===================================================META SEO===========================================-->
     <link rel="shortcut icon" type="image/ico" href="../resources/images/site/icon-1075208_640.ico" />
     <meta name="description" content="ce site est mon site personnel, j'y regroupe tous mes projets.">
-    <meta name="keywords" content="createur site internet, informatique, sites internet, wordpress, reparations informatiques, developpeur, developpeur web, fondateur">
+    <meta name="keywords"
+        content="createur site internet, informatique, sites internet, wordpress, reparations informatiques, developpeur, developpeur web, fondateur">
     <meta name="author" content="Sébastien REYNAUD">
-        <!--===================================================STYLES===========================================-->
+    <!--===================================================STYLES===========================================-->
 
-    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--===================================================GOOGLE SEARCH===========================================-->
+    <script>
+//GOOGLE SEARCH
+//Enter domain of site to search.
+var domainroot="reynaud-sebastien.fr"
+function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value } 
+</script> 
+
+
+    
 </head>
 
-<body>
-    {{> navbar}}
-    {{{body}}}
-    {{> footer}}
 
-</body>
+{{> navbar}}
+{{{body}}}
+{{> footer}}
+
+{{!-- <script>
+    document.getElementById('verifyForm').addEventListener('submit', runVerify);
+    function runVerify(e){
+        e.preventDefault();
+        runCaptcha();
+    }
+    function runCaptcha(){
+
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LeZcMQUAAAAAItMVC58y8AgvGhRQflO-DOcsqQD', {action: 'contact'}).then(function(token) {
+            const lastname = document.querySelector('#lastname');
+             const firstname = document.querySelector('#firstname');
+              const email = document.querySelector('#email');
+               const phone = document.querySelector('#phone');
+                const address = document.querySelector('#address');
+                 const adress2 = document.querySelector('#address2');
+                  const cp = document.querySelector('#cp');
+                   const city = document.querySelector('#city');
+                    const inputGroupSelect01 = document.querySelector('#inputGroupSelect01');
+                     const message = document.querySelector('#message');
+                     const captcha = token;
+                     sendData(lastname, firstname, email, phone, address, adress2, cp, city, inputGroupSelect01, message, captcha);
+
+        });
+    });
+    }
+    function sendData(lastname, firstname, email, phone, address, adress2, cp, city, inputGroupSelect01, message, captcha) {
+        const info = json.stringify({lastname, firstname, email, phone, address, adress2, cp, city, inputGroupSelect01, message, captcha});
+        fetch('/verify', {
+           method: 'POST',
+           headers: {
+               'Accept': 'application/json, text/plain, */contact*',
+               'Content-type': 'application/json' 
+           },
+           body: info 
+        }).then((res)=> res.json())
+        .then((data)=>{
+            alert('msg : ' + data.msg + ', score : ' + data.score);
+        })
+    }
+</script> --}}
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
@@ -34,4 +87,5 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
 <script src="https://kit.fontawesome.com/2c81bc6444.js" crossorigin="anonymous"></script>
+
 </html>

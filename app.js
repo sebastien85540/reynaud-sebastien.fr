@@ -1,3 +1,4 @@
+const port = 3000
 // MODULES
 const express       = require('express'),
     exphbs          = require('express-handlebars'),
@@ -46,7 +47,6 @@ const monCv         = require('./controllers/monCv')
 const error         = require('./controllers/error')
 const app           = express();
 // PORT
-port = 3000
 // RECAPTCHA
 // var PUBLIC_KEY      = require('./config/index.php').SITE_KEY ,
 //     PRIVATE_KEY     = require('./config/index.php').SECRET_KEY;

@@ -50,10 +50,10 @@ User.findOne({
             subject: "Mot de passe oublié", // Subject line
             text: `Bonjour ${user.firstname} !\n
                 Pour réinitialiser votre mot de passe, veuillez cliquer le lien suivant, ou le copier dans la barre d'url de votre navigateur.\n
-                localhost:3000/user/password/edit/${user._id}`, // plain text body
+                reynaud-sebastien.fr/user/password/edit/${user._id}`, // plain text body
             html: `<h1>Bonjour ${user.firstname} !</h1>
                 <p>Pour réinitialiser votre mot de passe, veuillez cliquer le lien suivant, ou le copier dans la barre d\'url de votre navigateur.</p>\
-                       <a href="http://localhost:3000/user/password/edit/${user._id}">localhost:3000/user/password/edit/${user._id}</a>` // html body
+                       <a href="https://reynaud-sebastien.fr/user/password/edit/${user._id}">reynaud-sebastien.fr/user/password/edit/${user._id}</a>` // html body
         };
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {

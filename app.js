@@ -53,7 +53,7 @@ const app           = express();
 // MONGO DB
 const db = require('./config/keys').MongoURI
 // mongoose
-mongoose
+mongoose 
     .connect(db, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -93,7 +93,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.use('*', (req, res, next) => {
     res.locals.user = req.session.userId;
-    console.log(res.locals.user);
+    // console.log(res.locals.user);
 
     next()
 })

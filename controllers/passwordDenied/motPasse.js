@@ -1,3 +1,4 @@
 module.exports = (req, res) => {
-    res.render('motPasse/passeOublie')
+    title = "mot de passe oublié"
+    res.render('motPasse/passeOublie',{title})
 }

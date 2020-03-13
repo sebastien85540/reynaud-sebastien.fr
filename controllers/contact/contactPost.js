@@ -1,4 +1,4 @@
-const mailSender              = 'sebastien.reynaud85@outlook.fr'
+const mailSender              = 'surfcastingdu85@gmail.com'
     , mailReceiver            = 'sebastien.reynaud85@outlook.fr'
     , mailPassword            = require('../../config/mailPassword')
     , nodemailer              = require('nodemailer');
@@ -26,16 +26,16 @@ module.exports = (req, res) => {
     
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: "SMTP.office365.com",
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
-            user: 'sebastien.reynaud85@outlook.fr', // generated ethereal user
+            user: mailSender, // generated ethereal user
             pass: mailPassword.MAILPASSWORD, // generated ethereal password
             
         },
         tls: {
-            rejectUnauthorized: true
+            rejectUnauthorized: false
         }
     });
     

@@ -119,12 +119,9 @@ i {
 *********                BODY                    ********
 ********************************************************/
 body {
-    background-image: url(https://cdn.pixabay.com/photo/2017/06/04/20/23/binary-2372130_960_720.jpg);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.295), #ffffff86),url(https://cdn.pixabay.com/photo/2017/06/04/20/23/binary-2372130_960_720.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    /* min-height: 100%; */
-
+    background-size: cover;    
 }
 
 /********************************************************
@@ -139,10 +136,12 @@ body {
 ********************************************************/
 
 footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: black;
-    height: auto;
     text-align: center;
-    padding: 1px;
 }
 
 footer p {
@@ -167,7 +166,9 @@ footer p {
 /********************************************************
 *********                CONTACT                 ********
 ********************************************************/
-
+.contact form .btn-danger{
+    padding-bottom: 7%;
+}
 
 /********************************************************
 *********              MON CV                    ********
@@ -175,6 +176,7 @@ footer p {
 #cv {
     background-image: url(../images/cv/fond_jaune.png);
     padding-top: 1%;
+    padding-bottom: 3%;
 }
 
 #cv h1 {
@@ -270,14 +272,18 @@ footer p {
 ********************************************************/
 
 /********************************************************
-*********              REGISTER                  ********
+*********         MOT DE PASSE OUBLIE            ********
 ********************************************************/
-
+section.passeOublie {
+    height: 86vh;
+}
 
 /********************************************************
 *********              PROFIL                  ********
 ********************************************************/
-
+.profil{
+    padding-bottom: 8%;
+}
 /********************************************************
 *********            MEDIA QUERIES               ********
 ********************************************************/

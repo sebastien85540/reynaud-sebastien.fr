@@ -33,7 +33,6 @@ const articleAdd    = require('./controllers/articles/articleAdd'),
     articlePost     = require('./controllers/articles/articlePost'),
     articlesPage    = require('./controllers/articles/articlesPage'),
     articleEdit     = require('./controllers/articles/articleEdit'),
-    articleEditPost = require('./controllers/articles/articleEditPost'),
     articleDelete   = require('./controllers/articles/articleDelete');
 // CONTACT
 const contact       = require('./controllers/contact/contact')
@@ -132,7 +131,42 @@ app.get('/article/delete/:id', articleDelete)                   // SUPPRESSION D
 
 //POST
 app.post('/article/post', auth, articleValidPost, articlePost)  // POST ARTICLE
-app.post('/article/edit/post/: id', articleEditPost)            // POST EDIT ARTICLE
+app.post('/article/edit/post/:id', (req, res) => {
+     const Article = require("./database/models/Article")
+         , path    = require('path');
+    
+let article = 
+{
+    _id: req.params.id
+}
+console.log("ok");
+
+console.log(article);
+console.log("c'est bon");
+
+const {image} = req.files// met l'image dans un objet
+const uploadFile = path.resolve(__dirname, 'public/articles', image.name);// recupere l'image pour l'envoyer dans le dossier public
+
+image.mv(uploadFile, (error) => {
+    Article.findByIdAndUpdate(article,{
+        ...req.body,
+        image: `/articles/${image.name}`
+    },
+    function (error, post) {
+        if (error) {
+            console.log(error);
+            console.log(req.body);
+            
+            return;
+        } else {
+            console.log(article);
+            
+            res.redirect('/articles');
+        }
+    });
+})
+
+})            // POST EDIT ARTICLE
 // CONTACT
 app.get('/contact', contact)                                    // PAGE CONTACT
 app.post('/contact/post', contactPost)

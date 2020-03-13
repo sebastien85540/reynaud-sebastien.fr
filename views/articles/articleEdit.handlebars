@@ -1,6 +1,6 @@
 <section class="article-edit">
         <div class="container">
-            <form action="/article/edit/post/{{article._id}}" method="POST" enctype="multipart/form-data">
+            <form action="/article/edit/post/{{article.id}}" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md">
                     <label class="label">Titre de l'article : </label>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </form>
-            <form action="../index.html" method="get">
+            <form action="/" method="get">
                 <div class="row">
                     <div class="col-md">
                     <button class="btn btn-danger">Annuler</button>

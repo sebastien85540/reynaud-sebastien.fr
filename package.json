@@ -4,7 +4,9 @@
   "description": "vous pouvez y trouvé tous mes projets en cours ou finis, ainsi que mon CV",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,8 @@
     "nodemailer": "^6.3.1",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
-    "request": "^2.88.0"
-  }
+    "request": "^2.88.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }

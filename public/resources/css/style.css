@@ -135,18 +135,14 @@ body {
 *********                FOOTER                  ********
 ********************************************************/
 
-footer {
+.footer {
+    color: #ffffff;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: black;
     text-align: center;
-}
-
-footer p {
-    color: #ffffff;
-
 }
 
 /********************************************************
@@ -167,7 +163,7 @@ footer p {
 *********                CONTACT                 ********
 ********************************************************/
 .contact form .btn-danger{
-    padding-bottom: 7%;
+    margin-bottom: 7%;
 }
 
 /********************************************************

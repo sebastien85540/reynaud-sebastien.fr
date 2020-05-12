@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}-reynaud-sebastien.fr</title>
+    <title><%= title %>-reynaud-sebastien.fr</title>
     <!--===================================================META SEO===========================================-->
     <link rel="shortcut icon" type="image/ico" href="../resources/images/site/icon-1075208_640.ico" />
     <meta name="description" content="ce site est mon site personnel, j'y regroupe tous mes projets.">
@@ -31,11 +31,9 @@ function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfron
 </head>
 
 
-{{> navbar}}
-{{{body}}}
-{{> footer}}
 
-{{!-- <script>
+
+<script>
     document.getElementById('verifyForm').addEventListener('submit', runVerify);
     function runVerify(e){
         e.preventDefault();
@@ -75,7 +73,7 @@ function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfron
             alert('msg : ' + data.msg + ', score : ' + data.score);
         })
     }
-</script> --}}
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

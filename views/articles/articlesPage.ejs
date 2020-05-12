@@ -1,3 +1,6 @@
+<%- include('../layouts/main') -%>
+<%- include ('../partials/navbar') -%>
+
 <section class="articles" id="articles">
         <div class="container">
             <div class="row">
@@ -18,15 +21,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                            {{#each posts}}
+                          <% for (post of posts) { %>
                           <tr>
-                            <th scope="row">{{moment createDate format='DD/MM/YYYY'}}</th>
-                            <td><img src="{{image}}" class="rounded img-fluid img-thumbnail" alt="Responsive image"></td>
-                            <td class="content">{{content}}</td>
-                            <td><a href="/article/{{_id}}"><button class="btn btn-info">Voir</button></a></td>
+                            <th scope="row"><%= post.title %></th>
+                            <td><img src="<%= post.image %>" class="rounded img-fluid img-thumbnail" alt="Responsive image"></td>
+                            <td class="content"><%= post.content %></td>
+                            <td><a href="/article/"><button class="btn btn-info">Voir</button></a></td>
                           </tr>
-                            {{/each}}
-                          
+                          <% } %>                        
                         </tbody>
                       </table>
                     </div>
@@ -34,3 +36,4 @@
             </div>
         </div>
     </section>
+    <%- include ('../partials/footer') -%>

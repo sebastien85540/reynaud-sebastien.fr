@@ -1,0 +1,40 @@
+        <!--========================================================ACCUEIL===================================================-->
+        <%- include('layouts/main') -%>
+        <%- include ('partials/navbar'); -%>
+
+
+        <section class="accueil" id="accueil">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <h1>Bonjour</h1>
+                        <p>Vous êtes ici sur mon site internet personnel, vous pourrez y retrouver mes différents
+                            travaux.
+                        </p>
+                        <p>N'hesitez pas à regarder, vous êtes ici chez vous.</p>
+                        <p>Pour toutes demandes d'emploi, ou de site envoyez moi un Email.</p>
+                        <p>Bonne visite et merci.</p>
+                        <p><strong>Sébastien REYNAUD</strong></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <% for (post of posts) { %>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="<%= post.image %>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= post.title %></h5>
+                                    <p class="card-text"><%= post.content %></p>
+                                    <a href="/article/<%= post._id %>" class="btn btn-primary">Lire</a>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include ('partials/footer') -%>

@@ -1,3 +1,6 @@
+<%- include('../layouts/main'); -%>
+<%- include ('../partials/navbarAdmin'); -%>
+
 <section class="profil">
         <div class="container">
             <div class="row">
@@ -5,17 +8,19 @@
                     <h3>Mon profil</h3>
                 </div>
             </div>
+            <% if (user) { %>
             <div class="row">
                 <div class="col-md-4">
-                   <p>Nom : {{utilisateur.lastname}}</p> 
+                   <p>Nom : <%= user.lastname %></p> 
                 </div>
                 <div class="col-md-4">
-                    <p>Prénom : {{utilisateur.firstname}}</p>
+                    <p>Prénom : <%= user.firstname %></p>
                 </div>
                 <div class="col-md-4">
-                    <p>Email : {{utilisateur.email}}</p>
+                    <p>Email : <%= user.email %></p>
                 </div>
             </div>
+            <% } %>
             <div class="row">
                 <div class="col-md">
                     <table class="table table-striped">
@@ -28,18 +33,17 @@
                           </tr>
                         </thead>
                         <tbody>
-                            {{#each posts}}
+                            <% for (post of posts) { %>
                           <tr>
-                            <th scope="row">{{moment createDate format="DD/MM/YYYY"}}</th>
-                            <td>{{title}}</td>
-                            <td>{{content}}</td>
+                            <th scope="row"></th>
+                            <td><%= post.title %></td>
+                            <td><%= post.content %></td>
                             <td>
-                                <a href="/article/edit/{{_id}}"><i class="fas fa-pencil-alt"></i></a> 
-                                <a href="/article/delete/{{_id}}"><i class="fas fa-trash-alt"></i></a>
+                                <a href="/article/edit/<%= post._id %>"><i class="fas fa-pencil-alt"></i></a> 
+                                <a href="/article/delete/<%=post._id %>"><i class="fas fa-trash-alt"></i></a>
                             </td>
                          </tr>
-                         {{/each}}
-                          
+                         <% } %>                          
                         </tbody>
                       </table>
                 </div>
@@ -52,3 +56,4 @@
             </div>
         </div>
     </section>
+    <%- include ('../partials/footerAdmin') -%>

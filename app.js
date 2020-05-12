@@ -1,7 +1,6 @@
 const port = 3000
 // MODULES
 const express       = require('express'),
-    exphbs          = require('express-handlebars'),
     mongoose        = require('mongoose'),
     bodyParser      = require('body-parser'),
     fileupload      = require('express-fileupload'),
@@ -88,8 +87,7 @@ app.use(bodyParser.json())
 // FILE UPLOAD
 app.use(fileupload())
 // HANDLEBARS
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+app.set('view engine', 'ejs');
 app.use('*', (req, res, next) => {
     res.locals.user = req.session.userId;
     // console.log(res.locals.user);
@@ -99,9 +97,7 @@ app.use('*', (req, res, next) => {
 
 // MOMENT
 
-var Handlebars = require("handlebars");
-var MomentHandler = require("handlebars.moment");
-MomentHandler.registerHelpers(Handlebars);
+
 // STATIC
 app.use(express.static('public'));
 // ROUTES
@@ -139,12 +135,12 @@ let article =
 {
     _id: req.params.id
 }
-console.log("ok");
-
 console.log(article);
 console.log("c'est bon");
 
 const {image} = req.files// met l'image dans un objet
+console.log(req.files);
+
 const uploadFile = path.resolve(__dirname, 'public/articles', image.name);// recupere l'image pour l'envoyer dans le dossier public
 
 image.mv(uploadFile, (error) => {

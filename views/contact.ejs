@@ -1,6 +1,7 @@
     <!--===================================================GOOGLE CAPTCHA===========================================-->
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    {{!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeZcMQUAAAAAItMVC58y8AgvGhRQflO-DOcsqQD"></script> --}}
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeZcMQUAAAAAItMVC58y8AgvGhRQflO-DOcsqQD"></script>
 
     <script type="text/javascript">
         var onloadCallback = function () {
@@ -11,7 +12,8 @@
         };
     </script>
 
-
+        <%- include('layouts/main') -%>
+        <%- include ('partials/navbar'); -%>
     <!--========================================================CONTACT===================================================-->
     <secion class="contact" id="contact">
         <div class="container">
@@ -125,3 +127,4 @@
     </secion>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     </script>
+    <%- include ('partials/footer') -%>

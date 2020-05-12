@@ -1,31 +1,34 @@
     <!--========================================================ARTICLE===================================================-->
-
+    <%- include('../layouts/main'); -%>
+    <%- include ('../partials/navbar'); -%>
+    
     <section class="article-page" id="article-page">
         <div class="container">
             
             <div class="row"> 
                 <div class="col-md">
-                    <h1>{{article.title}}</h1>
+                    <h1><%= post.title %></h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md">
-                    <img src="{{article.image}}" class="rounded mx-auto d-block img-fluid img-thumbnail" alt="Responsive image">
+                    <img src="<%= post.image %>" class="rounded mx-auto d-block img-fluid img-thumbnail" alt="Responsive image">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md">
-                    <article>{{article.content}}</article>
+                    <article><%= post.content %></article>
                 </div>
             </div>
            <div class="row">
                <div class="col-md-6">
-                  <p>{{moment createDate format="DD/MM/YYYY"}}</p> 
+                  <p></p> 
                 </div>
                 <div class="col-md-6">
-                    <a href="{{article.link}}"><button class="btn btn-success">site internet</button></a>
+                    <a href="<%= post.link %>"><button class="btn btn-success">site internet</button></a>
                 </div>
            </div>
            
         </div>
     </section>
+    <%- include ('../partials/footer') -%>

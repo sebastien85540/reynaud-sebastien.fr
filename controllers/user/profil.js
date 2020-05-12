@@ -5,8 +5,8 @@ const Post = require ('../../database/models/Article')
 module.exports = async (req, res) => {
     const title = "page de profil"
         , posts = await Post.find(req.params.id).sort({_id:-1})
-        , utilisateur = await User.findById(req.session.userId)
+        , user = await User.findById(req.session.userId)
         console.log(req.session.userId);
         
-    res.render('user/profil', {utilisateur, posts, title})
+    res.render('user/profil', {user, posts, title})
 }
